@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <h1 class="navbar">Booksy</h1>
+    </div>
+    <div class="container">
+      <div class="page-conatiner">
+        <h2>Boopathi</h2>
+
+        <h5>BE.CSE</h5>
+        <p>
+          Lorem ipsum dolor sit amet consectetur ad Fugit delectus, praesentium
+          voluptatibus labore nisi nostrum voluptate beatae totam fuga? Placeat
+          fuga iusto a corporis hic magni nostrum, soluta ducimus, sint
+          voluptatem molestiae delectus perspiciatis cum.
+        </p>
+        <button onClick="deletestudent(this)" class="delbtn">Delete</button>
+      </div>
+      
+    </div>
+    <div class="popup-overlay"></div>
+    <div class="popup-overlay-content">
+      <h2>Add Student Data</h2>
+      <form action="">
+        <input
+          type="text"
+        
+          placeholder="Enter-Student-name"
+          name=""
+          id="student-name-input"  required
+        />
+        <input
+          type="text"
+          placeholder="Enter-student-degree"
+          name=""
+          id="student-degree-input" required
+        />
+        <textarea
+          name=""
+          class="descriptions"
+          placeholder="short description"
+          id="description" required
+        ></textarea>
+        <br />
+        <button class="addoverlaybtn" onClick="createnewdata(event)" id="add-student-data">Add</button>
+        <button class="canceloverlaybtn" onClick="defultclose(event)" id="cancel-student-data">
+          Cancel
+        </button>
+      </form>
+    </div>
+    <button class="add-btn" id="add-popup-btn"><b>+</b></button>
+  </body>
+  <script src="/booksky/script.js"></script>
+</html>
