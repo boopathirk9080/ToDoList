@@ -1,0 +1,64 @@
+<body>
+  <input type="text" name="" id="inputValue" />
+  <button onclick="addingValue()">Add</button>
+  <ul id="container">
+    <li>Hello <button onclick="removeline(event)">Delete</button></li>
+  </ul>
+</body>
+
+<script>
+  var container = document.getElementById("container");
+  function addingValue() {
+    var inputValue = document.getElementById("inputValue").value;
+    var newValue = document.createElement("li");
+    newValue.innerHTML =
+      inputValue + "<button onclick='removeline(event)'>Delete</Button>";
+    container.insertAdjacentElement("beforeend", newValue);
+    var inputValue = document.getElementById("inputValue").value='';
+    // document.getElementById("inputValue").value =""
+    // Reset input field after adding a new value
+    // container.innerHTML = inputValue
+  }
+  function removeline(event){
+    event.target.parentElement.remove();
+  }
+</script>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDoList</title>
+  </head>
+  <body>
+    <input type="text" name="" id="inputValue" />
+    <button onClick="add()" id="addButton">Add</button>
+
+    <ul id="box">
+      <li>Hello <button onClick="deleteButton(event)">Delete</button></li>
+    </ul>
+  </body>
+  <script>
+    function add() {
+      var inputValue = document.getElementById("inputValue");
+      var newValue = inputValue.value;
+      console.log(newValue);
+      adding(newValue);
+    }
+    function adding(newValue) {
+      var box = document.getElementById("box");
+      var li = document.createElement("li");
+
+      var deleteButton = document.createElement("button");
+      deleteButton.textContent = "Delete";
+
+      li.innerHTML = newValue +"    <button  onclick='deleteButton(event)'>delete</button>";
+      box.insertAdjacentElement("beforeend", li);
+    }
+    function deleteButton(event) {
+      console.log("wfwf");
+      event.target.parentElement.remove();
+    }
+  </script>
+</html> -->
